@@ -1,0 +1,68 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 0,
+            "failed": 4,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1784720255.4822354,
+            "stop": 1784720255.8677068
+        },
+        "tests": [
+            {
+                "name": "tests/test_outputs.py::test_report_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0029658449999487857,
+                "start": 1784720255.5925639,
+                "stop": 1784720255.6422262,
+                "retries": 0,
+                "file_path": "../app/tests/test_outputs.py",
+                "trace": ">   ???\nE   AssertionError: Expected /app/report.json to exist.\nE   assert False\nE    +  where False = exists()\nE    +    where exists = PosixPath('/app/report.json').exists\nE    +      where PosixPath('/app/report.json') = Path('/app/report.json')\n\n/app/tests/test_outputs.py:7: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "tests/test_outputs.py::test_report_is_valid_json",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0019523579998121932,
+                "start": 1784720255.6429582,
+                "stop": 1784720255.720626,
+                "retries": 0,
+                "file_path": "../app/tests/test_outputs.py",
+                "trace": ">   ???\n\n/app/tests/test_outputs.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/app/report.json'), mode = 'r', buffering = -1\nencoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "tests/test_outputs.py::test_report_has_required_fields",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015863920000356302,
+                "start": 1784720255.7230446,
+                "stop": 1784720255.7932775,
+                "retries": 0,
+                "file_path": "../app/tests/test_outputs.py",
+                "trace": ">   ???\n\n/app/tests/test_outputs.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/usr/local/lib/python3.12/pathlib.py:1027: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/app/report.json'), mode = 'r', buffering = -1\nencoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "tests/test_outputs.py::test_report_counts_are_correct",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015403840000089986,
+                "start": 1784720255.793999,
+                "stop": 1784720255.8664029,
+                "retries": 0,
+                "file_path": "../app/tests/test_outputs.py",
+                "trace": ">   ???\n\n/app/tests/test_outputs.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/usr/local/lib/python3.12/pathlib.py:1027: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/app/report.json'), mode = 'r', buffering = -1\nencoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}
